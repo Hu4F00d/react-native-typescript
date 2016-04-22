@@ -1,0 +1,21 @@
+{
+  "name": "ReactNativeTS",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "start": "concurrent \"npm run watch\" \"node node_modules/react-native/local-cli/cli.js start\" ",
+    "android": "adb reverse tcp:8081 tcp:8081 && react-native run-android"
+  },
+  "dependencies": {
+    "react": "^0.14.8",
+    "react-native": "^0.24.1"
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^2.13.0",
+    "typescript": "^1.8.10"
+  }
+}
